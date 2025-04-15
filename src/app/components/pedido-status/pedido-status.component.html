@@ -1,0 +1,25 @@
+<h2>Status do Pedido</h2>
+
+<label for="statusSelect">Selecione o status:</label>
+<select id="statusSelect" [(ngModel)]="status">
+  <option value="pendente">Pendente</option>
+  <option value="enviado">Enviado</option>
+  <option value="entregue">Entregue</option>
+</select>
+
+
+
+@switch(status) {
+  @case('pendente') {
+    <p>Aguardando confirmação</p>
+  }
+  @case('enviado') {
+    <p>Pedido a caminho</p>
+  }
+  @case('entregue') {
+    <p>Pedido entregue</p>
+  }
+  @default {
+    <p>Status desconhecido</p>
+  }
+}
