@@ -1,0 +1,9 @@
+<h2>Lista de Compras</h2>
+
+<ul>
+  @for (item of items; track $index) {
+    <li>{{ item }}</li>
+  } @empty {
+    <li>Nenhum item na lista</li>
+  }
+</ul>
