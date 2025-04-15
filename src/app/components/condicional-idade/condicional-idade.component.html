@@ -1,0 +1,14 @@
+<h2>Exemplo de condicional com if/else</h2>
+
+<p>Idade atual: {{ idade }}</p>
+
+<button (click)="incrementarIdade()">+ Aumentar</button>
+<button (click)="decrementarIdade()">- Diminuir</button>
+
+<hr />
+
+@if (idade >= 18) {
+  <p>Acesso permitido</p>
+} @else {
+  <p>Acesso negado</p>
+}
