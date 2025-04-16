@@ -1,0 +1,21 @@
+<h2>Exemplo: Switch com Números e Strings</h2>
+
+<label for="valorSelect">Selecione o valor:</label>
+<select id="valorSelect" [(ngModel)]="value">
+  <option [ngValue]="1">1</option>
+  <option [ngValue]="'dois'">"dois"</option>
+  <option [ngValue]="'qualquer'">"qualquer"</option>
+</select>
+
+
+@switch (value) {
+  @case (1) {
+    <p>Um</p>
+  }
+  @case ('dois') {
+    <p>Dois</p>
+  }
+  @default {
+    <p>Valor não reconhecido</p>
+  }
+}
