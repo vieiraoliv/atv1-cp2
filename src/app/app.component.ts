@@ -5,11 +5,12 @@ import { ListaComprasComponent } from "./components/lista-compras/lista-compras.
 import { CondicionalIdadeComponent } from './components/condicional-idade/condicional-idade.component';
 import { TarefasListComponent } from './components/tarefas-list/tarefas-list.component';
 import { PedidoStatusComponent } from './components/pedido-status/pedido-status.component';
+import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FirstComponentsComponent, ListaComprasComponent,CondicionalIdadeComponent,TarefasListComponent,PedidoStatusComponent],
+  imports: [RouterOutlet, FirstComponentsComponent, ListaComprasComponent,CondicionalIdadeComponent,TarefasListComponent,PedidoStatusComponent,ListaUsuariosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

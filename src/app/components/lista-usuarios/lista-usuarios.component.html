@@ -1,0 +1,11 @@
+<h2>Lista de Usuários</h2>
+
+<ul>
+  @for (usuario of usuarios; track usuario.nome) {
+    <li>
+      Nome: {{ usuario.nome }}, Idade: {{ usuario.idade }}
+    </li>
+  } @empty {
+    <li>Nenhum usuário cadastrado</li>
+  }
+</ul>
