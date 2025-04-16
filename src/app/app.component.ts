@@ -9,12 +9,13 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { SwitchValoresComponent } from './components/switch-valores/switch-valores.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ListaProdutosComponent } from './components/lista-produtos/lista-produtos.component';
+import { CalculadoraComponent } from './components/calculadora/calculadora.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, FirstComponentsComponent, ListaComprasComponent,CondicionalIdadeComponent,TarefasListComponent,
-    PedidoStatusComponent,ListaUsuariosComponent,SwitchValoresComponent,LoginFormComponent,ListaProdutosComponent],
+    PedidoStatusComponent,ListaUsuariosComponent,SwitchValoresComponent,LoginFormComponent,ListaProdutosComponent,CalculadoraComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

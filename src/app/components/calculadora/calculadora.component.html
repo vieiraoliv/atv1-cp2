@@ -1,0 +1,46 @@
+<h2>Calculadora Simples</h2>
+
+<div>
+  <label for="valor1">Primeiro valor:</label>
+  <input id="valor1" type="number" [(ngModel)]="valor1" />
+
+  <br /><br />
+
+  <label for="valor2">Segundo valor:</label>
+  <input id="valor2" type="number" [(ngModel)]="valor2" />
+
+  <br /><br />
+
+  <label for="operationSelect">Operação:</label>
+  <select id="operationSelect" [(ngModel)]="operation">
+    <option value="soma">Somar</option>
+    <option value="subtracao">Subtrair</option>
+    <option value="divisao">Dividir</option>
+    <option value="multiplicacao">Multiplicar</option>
+  </select>
+</div>
+
+<hr />
+
+<!-- Verificar se é divisão por zero -->
+@if (operation === 'divisao' && valor2 === 0) {
+  <p style="color: red; font-weight: bold;">Erro: divisão por zero!</p>
+} @else {
+  @switch(operation) {
+    @case('soma') {
+      <p>Resultado: {{ valor1 + valor2 }}</p>
+    }
+    @case('subtracao') {
+      <p>Resultado: {{ valor1 - valor2 }}</p>
+    }
+    @case('divisao') {
+      <p>Resultado: {{ valor1 / valor2 }}</p>
+    }
+    @case('multiplicacao') {
+      <p>Resultado: {{ valor1 * valor2 }}</p>
+    }
+    @default {
+      <p>Operação inválida!</p>
+    }
+  }
+}
