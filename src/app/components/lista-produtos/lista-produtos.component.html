@@ -1,0 +1,17 @@
+<h2>Lista de Produtos</h2>
+
+<ul>
+  @for (produto of produtos; track produto.nome) {
+    @if (produto.promocao) {
+      <li class="promocao">
+        {{ produto.nome }} - R$ {{ produto.preco }}
+      </li>
+    } @else {
+      <li>
+        {{ produto.nome }} - R$ {{ produto.preco }}
+      </li>
+    }
+  } @empty {
+    <li>Nenhum produto cadastrado</li>
+  }
+</ul>

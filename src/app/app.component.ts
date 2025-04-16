@@ -8,12 +8,13 @@ import { PedidoStatusComponent } from './components/pedido-status/pedido-status.
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { SwitchValoresComponent } from './components/switch-valores/switch-valores.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ListaProdutosComponent } from './components/lista-produtos/lista-produtos.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, FirstComponentsComponent, ListaComprasComponent,CondicionalIdadeComponent,TarefasListComponent,
-    PedidoStatusComponent,ListaUsuariosComponent,SwitchValoresComponent,LoginFormComponent],
+    PedidoStatusComponent,ListaUsuariosComponent,SwitchValoresComponent,LoginFormComponent,ListaProdutosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
