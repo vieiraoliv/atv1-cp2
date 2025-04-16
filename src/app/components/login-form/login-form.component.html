@@ -1,0 +1,29 @@
+<h2>Login com if/else</h2>
+
+<div>
+  <label for="email">Email:</label>
+  <input id="email" [(ngModel)]="email" type="text" placeholder="Digite seu email" />
+
+  <br>
+
+  <label for="password">Senha:</label>
+  <input id="password" [(ngModel)]="password" type="password" placeholder="Digite sua senha" />
+
+  <br>
+
+  <button (click)="clicked = true">Login</button>
+  <button (click)="resetForm()">Reset</button>
+</div>
+
+
+@if (clicked) {
+  @if (email.trim() === '' || password.trim() === '') {
+    <p>Campos obrigatórios!</p>
+  } @else if (!email.includes('@') || password.length < 6) {
+    <p>Credenciais inválidas!</p>
+  } @else if (email === 'user@teste.com' && password === '123456') {
+    <p>Login bem-sucedido!</p>
+  } @else {
+    <p>Credenciais inválidas!</p>
+  }
+}
